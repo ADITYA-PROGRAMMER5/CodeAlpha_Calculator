@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Calculator</h1>
+    <div class="calculator">
+
+        <input type="text" id="display" value="0" readonly>
+
+        <div class="buttons">
+
+            <button class="clear" onclick="clearDisplay()">C</button> 
+            <button class="delete" onclick="deleteNumber()">DEL</button> 
+            <button class="operator" onclick="chooseOperator('%')">%</button> 
+            <button class="operator" onclick="chooseOperator('/')">÷</button>
+        </div>
+    </div>
 </body>
 </html>
