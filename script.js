@@ -28,3 +28,38 @@ function addNumber(number) {
         }
     }
 }
+
+function addDecimal() {
+
+    if (waitingForSecondNumber) {
+
+        display.value = "0.";
+
+        waitingForSecondNumber = false;
+
+        return;
+    }
+
+    if (!display.value.includes(".")) {
+        display.value += ".";
+    }
+}
+
+function chooseOperator(selectedOperator) {
+
+    const currentNumber = parseFloat(display.value);
+
+    if (isNaN(currentNumber)) {
+        return;
+    }
+
+    if (operator !== null && !waitingForSecondNumber) {
+        calculate();
+    }
+
+    firstNumber = parseFloat(display.value);
+
+    operator = selectedOperator;
+
+    waitingForSecondNumber = true;
+}
