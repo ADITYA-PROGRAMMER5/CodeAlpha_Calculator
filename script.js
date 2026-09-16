@@ -28,3 +28,19 @@ function addNumber(number) {
         }
     }
 }
+
+function addDecimal() {
+
+    if (waitingForSecondNumber) {
+
+        display.value = "0.";
+
+        waitingForSecondNumber = false;
+
+        return;
+    }
+
+    if (!display.value.includes(".")) {
+        display.value += ".";
+    }
+}
