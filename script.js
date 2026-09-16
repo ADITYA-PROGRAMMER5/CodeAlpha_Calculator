@@ -45,21 +45,16 @@ function addDecimal() {
     }
 }
 
-function chooseOperator(selectedOperator) {
-
-    const currentNumber = parseFloat(display.value);
-
-    if (isNaN(currentNumber)) {
-        return;
-    }
-
-    if (operator !== null && !waitingForSecondNumber) {
-        calculate();
-    }
-
-    firstNumber = parseFloat(display.value);
-
-    operator = selectedOperator;
-
-    waitingForSecondNumber = true;
+function chooseOperator(selectedOperator) { 
+    const currentNumber = parseFloat(display.value); 
+    
+    if (isNaN(currentNumber)) { return; } 
+     
+    if (operator !== null && !waitingForSecondNumber) { 
+        calculate(); 
+    } 
+    
+    firstNumber = parseFloat(display.value); 
+    operator = selectedOperator; 
+    waitingForSecondNumber = true; 
 }
