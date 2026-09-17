@@ -117,3 +117,11 @@ function calculate() {
 
     waitingForSecondNumber = true;
 }
+
+function clearDisplay() {
+
+    display.value = "0";
+
+    resetCalculator();
+}
+
