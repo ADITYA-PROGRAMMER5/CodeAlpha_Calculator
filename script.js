@@ -58,3 +58,62 @@ function chooseOperator(selectedOperator) {
     operator = selectedOperator; 
     waitingForSecondNumber = true; 
 }
+
+function calculate() {
+
+    if (operator === null || firstNumber === null) {
+        return;
+    }
+
+    const secondNumber = parseFloat(display.value);
+
+    let result;
+
+    switch (operator) {
+
+        case "+":
+            result = firstNumber + secondNumber;
+            break;
+
+
+        case "-":
+            result = firstNumber - secondNumber;
+            break;
+
+
+        case "*":
+            result = firstNumber * secondNumber;
+            break;
+
+
+        case "/":
+
+            if (secondNumber === 0) {
+
+                display.value = "Error";
+
+                resetCalculator();
+
+                return;
+            }
+
+            result = firstNumber / secondNumber;
+
+            break;
+
+
+        case "%":
+            result = firstNumber % secondNumber;
+            break;
+    }
+
+
+    display.value = result;
+
+
+    firstNumber = result;
+
+    operator = null;
+
+    waitingForSecondNumber = true;
+}
