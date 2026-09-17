@@ -147,3 +147,59 @@ function deleteNumber() {
 
     }
 }
+document.addEventListener("keydown", function(event) {
+
+    const key = event.key;
+
+
+    if (key >= "0" && key <= "9") {
+
+        addNumber(key);
+
+    }
+
+
+    else if (key === ".") {
+
+        addDecimal();
+
+    }
+
+
+    else if (
+        key === "+" ||
+        key === "-" ||
+        key === "*" ||
+        key === "/" ||
+        key === "%"
+    ) {
+
+        chooseOperator(key);
+
+    }
+
+
+    // Enter key to Calculate
+    else if (key === "Enter" || key === "=") {
+
+        calculate();
+
+    }
+
+
+    // Escape key to Clear
+    else if (key === "Escape") {
+
+        clearDisplay();
+
+    }
+
+
+    // Backspace key to Delete
+    else if (key === "Backspace") {
+
+        deleteNumber();
+
+    }
+
+});
