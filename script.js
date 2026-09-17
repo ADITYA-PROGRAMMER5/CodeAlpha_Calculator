@@ -125,3 +125,13 @@ function clearDisplay() {
     resetCalculator();
 }
 
+function resetCalculator() {
+
+    firstNumber = null;
+
+    operator = null;
+
+    waitingForSecondNumber = false;
+}
+
+
