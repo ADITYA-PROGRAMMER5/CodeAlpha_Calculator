@@ -134,4 +134,16 @@ function resetCalculator() {
     waitingForSecondNumber = false;
 }
 
+function deleteNumber() {
 
+    if (display.value.length > 1) {
+
+        display.value = display.value.slice(0, -1);
+
+    } 
+    else {
+
+        display.value = "0";
+
+    }
+}
