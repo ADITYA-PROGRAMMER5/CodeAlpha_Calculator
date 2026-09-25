@@ -41,7 +41,7 @@ Calculator/
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/calculator.git
+https://github.com/ADITYA-PROGRAMMER5/CodeAlpha_Calculator.git
 ```
 
 2. Open the project folder.
